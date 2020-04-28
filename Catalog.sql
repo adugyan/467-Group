@@ -8,3 +8,7 @@ CREATE TABLE Orders(OrderID int not null auto_increment, WeightBrackets varchar(
   ShipStatus varchar(50) not null, ProductNum int not null, number int not null, OrderAmount int not null,
   PRIMARY KEY (OrderID),
   FOREIGN KEY (ProductNum) REFERENCES Product(ProductNum) ON DELETE CASCADE);
+
+INSERT INTO Product VALUES (11, 12, 'A-1-1', 13);
+
+INSERT INTO Orders VALUES (101, 'Heavy', 102.33, 'Aaron', 'aaron@mail.com', ' ', '04/27/2020', 'New Order', '11', '103', 104);              
