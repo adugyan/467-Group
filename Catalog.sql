@@ -10,5 +10,7 @@ CREATE TABLE Orders(OrderID int not null auto_increment, WeightBrackets varchar(
   FOREIGN KEY (ProductNum) REFERENCES Product(ProductNum) ON DELETE CASCADE);
 
 INSERT INTO Product VALUES (11, 12, 'A-1-1', 13);
+INSERT INTO Product VALUES (21, 22, 'B-1-1', 23);
 
-INSERT INTO Orders VALUES (101, 'Heavy', 102.33, 'Aaron', 'aaron@mail.com', ' ', '04/27/2020', 'New Order', '11', '103', 104);              
+INSERT INTO Orders VALUES (101, 'Heavy', 102.33, 'Aaron', 'aaron@mail.com', '103 W Apache St. Arlington Heights IL.', '04/27/2020', 'New Order', '11', '104', 105);              
+INSERT INTO Orders VALUES (201, 'Light', 202.33, 'Brian', 'Brian@mail.com', '203 E Bussie Rd. Bensenville IL.', '04/26/2020', 'Shipped', '21', '204', 205);              
