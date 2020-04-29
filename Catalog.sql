@@ -13,3 +13,4 @@ INSERT INTO Product VALUES (21, 22, 'B-1-1', 23);
 
 INSERT INTO Orders VALUES (101, 'Heavy', 102.33, 'Aaron', 'aaron@mail.com', '103 W Apache St. Arlington Heights IL.', '04/27/2020', 'New Order', 12, 105);              
 INSERT INTO Orders VALUES (201, 'Light', 202.33, 'Brian', 'Brian@mail.com', '203 E Bussie Rd. Bensenville IL.', '04/26/2020', 'Shipped', 22, 205);              
+INSERT INTO Orders VALUES (301, 'Heavy', 102.33, 'Charles', 'Charles@mail.com', '303 W Apache St. Arlington Heights IL.', '04/27/2020', 'New Order', 12, 305); 
