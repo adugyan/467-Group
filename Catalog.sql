@@ -1,5 +1,5 @@
 DROP TABLE IF EXISTS Product;
-DROP TABLE IF EXISTS Order;
+DROP TABLE IF EXISTS Orders;
 
 CREATE TABLE Product(ProductNum int not null auto_increment, number int not null, ProductLoc varchar(50) not null, ProductAmount int not null,
   PRIMARY KEY (ProductNum));
