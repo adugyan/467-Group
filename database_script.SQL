@@ -1,5 +1,6 @@
 DROP TABLE IF EXISTS Product;
 DROP TABLE IF EXISTS Orders;
+DROP TABLE IF EXISTS Weights;
 
 CREATE TABLE Product
 	(
@@ -23,6 +24,13 @@ CREATE TABLE Orders
 	number int not null, 
 	OrderAmount int not null,
 	PRIMARY KEY (OrderID)
+	);
+
+CREATE TABLE Weights
+	(
+	MinW int not null,
+	MaxW int not null,
+	Cost int not null
 	);
 
 INSERT INTO Product
@@ -184,4 +192,14 @@ VALUES
 	(101, 'Heavy', 102.33, 'Aaron', 'aaron@mail.com', '103 W Apache St. Arlington Heights IL.', '04/27/2020', 'New Order', 12, 105),              
 	(201, 'Light', 202.33, 'Brian', 'Brian@mail.com', '203 E Bussie Rd. Bensenville IL.', '04/26/2020', 'Shipped', 22, 205),             
 	(301, 'Heavy', 302.33, 'Charles', 'Charles@mail.com', '303 W Apache St. Arlington Heights IL.', '04/27/2020', 'New Order', 12, 305); 
+
+INSERT INTO Weights
+	(MinW, MaxW, Cost)
+VALUES
+	(0,10,5),
+	(10,25,7),
+	(25,45,10),
+	(45,70,15),
+	(70,100,25);
+
 
