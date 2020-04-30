@@ -67,4 +67,18 @@
             return $pdo;
 
             }
+
+
+    try {
+        $pdo = new PDO($dsn, $GLOBALS['usernameL'], $GLOBALS['passwordL']);
+
+        $sql = 'SELECT * FROM parts;
+
+        $q = $pdo->query($sql);
+        $q->setFetchMode(PDO::FETCH_ASSOC);
+    } catch (PDOException $e) {
+        die("Could not connect to the database $dbname :" . $e->getMessage());
+    }
+
+
     ?>
