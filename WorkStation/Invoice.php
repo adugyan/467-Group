@@ -16,15 +16,9 @@
 
 
 <?php
-  include('secret.php');
+  include('connectionVarsFunctions.php');
 
-  try{  //attempt to connect to database
-    $dsn = "mysql:host=courses;dbname=z1751913";
-    $pdo = new PDO($dsn, $username, $password);
-  }
-  catch(PDOexception $e){  //in case connection fail
-    echo "Connection to database failed: ".$e->getMessage();
-  }
+$pdo = safeConnectC();
 
   echo "Date:".date("m/d/Y")."<br>";
 
