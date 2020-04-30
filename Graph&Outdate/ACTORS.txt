@@ -1,0 +1,11 @@
+Customer
+Credict Card Vendor
+Workstations
+Printer
+Receiving Desk
+Administration
+Catalog (EX)
+
+
+Order DB
+Inventory DB
