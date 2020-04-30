@@ -19,7 +19,7 @@ CREATE TABLE Orders
 	CusName varchar(50) not null, 
 	CusEmail varchar(50) not null, 
 	CusMail varchar(50), 
-	Date varchar(50) not null,
+	Date date not null,
 	ShipStatus varchar(50) not null, 
 	number int not null, 
 	OrderAmount int not null,
@@ -189,9 +189,9 @@ VALUES
 INSERT INTO Orders 
 	(OrderID, WeightBrackets, ShipCharge, CusName, CusEmail, CusMail, Date, ShipStatus, number, OrderAmount)
 VALUES 
-	(101, 'Heavy', 102.33, 'Aaron', 'aaron@mail.com', '103 W Apache St. Arlington Heights IL.', '04/27/2020', 'New Order', 12, 105),              
-	(201, 'Light', 202.33, 'Brian', 'Brian@mail.com', '203 E Bussie Rd. Bensenville IL.', '04/26/2020', 'Shipped', 22, 205),             
-	(301, 'Heavy', 302.33, 'Charles', 'Charles@mail.com', '303 W Apache St. Arlington Heights IL.', '04/27/2020', 'New Order', 12, 305); 
+	(101, 'Heavy', 102.33, 'Aaron', 'aaron@mail.com', '103 W Apache St. Arlington Heights IL.', '2020-04-27', 'New Order', 12, 105),              
+	(201, 'Light', 202.33, 'Brian', 'Brian@mail.com', '203 E Bussie Rd. Bensenville IL.', '2020-04-27', 'Shipped', 22, 205),             
+	(301, 'Heavy', 302.33, 'Charles', 'Charles@mail.com', '303 W Apache St. Arlington Heights IL.', '2020-04-27', 'New Order', 12, 305); 
 
 INSERT INTO Weights
 	(MinW, MaxW, Cost)
