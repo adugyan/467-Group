@@ -18,7 +18,7 @@
 <?php
   include('connectionVarsFunctions.php');
 
-$pdo = safeConnectC();
+  $pdo = safeConnectC();
 
   echo "Date:".date("m/d/Y")."<br>";
 
@@ -73,14 +73,8 @@ $pdo = safeConnectC();
   $ShipCharge = $row["ShipCharge"];
 
 //connect to parts DB
-  try{  //attempt to connect to database
-    $dsn = "mysql:host=blitz.cs.niu.edu;dbname=csci467";
-    $pdo = new PDO($dsn, "student", "student");
-  }
-  catch(PDOexception $e){  //in case connection fail
-    echo "Connection to database failed: ".$e->getMessage();
-  }
-
+  $pdo = safeConnectL();
+    
 //fetch item description etc.
   $sql = "SELECT description, price, pictureURL
           FROM parts WHERE number=$ProductID";
