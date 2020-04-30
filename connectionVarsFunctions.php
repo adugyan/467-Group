@@ -1,4 +1,5 @@
-   	//Sets database variables for Catalog
+<?php
+        //Sets database variables for Catalog
 	$usernameC = "z1838064";
 	$passwordC = "1999Dec01";
 	$hostnameC = "courses";
@@ -54,5 +55,5 @@
 
         //Returns connection object
         return $pdo;
-
-        }
+	}
+?>
