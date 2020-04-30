@@ -57,18 +57,10 @@
   <br>
 
 <?php
-  include('secret.php');
+  include('connectionVarsFunctions.php');
   error_reporting(0);
 
-  try{  //attempt to connect to database
-    $dsn = "mysql:host=courses;dbname=z1751913";
-    $pdo = new PDO($dsn, $username, $password);
-  }
-  catch(PDOexception $e){  //in case connection fail
-    echo "Connection to database failed: ".$e->getMessage();
-  }
-
-
+  safeConnectC();
 
 //the sql command for the table
   $sql = "SELECT Distinct OrderID, Orders.number, OrderAmount, CusName, CusMail, CusEmail, WeightBrackets, ShipCharge
