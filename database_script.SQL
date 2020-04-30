@@ -189,9 +189,9 @@ VALUES
 INSERT INTO Orders 
 	(OrderID, WeightBrackets, ShipCharge, CusName, CusEmail, CusMail, Date, ShipStatus, number, OrderAmount)
 VALUES 
-	(101, 'Heavy', 102.33, 'Aaron', 'aaron@mail.com', '103 W Apache St. Arlington Heights IL.', '2020-04-27', 'New Order', 12, 105),              
+	(101, 'Heavy', 102.33, 'Aaron', 'aaron@mail.com', '103 W Apache St. Arlington Heights IL.', '2020-04-27', 'Authorized', 12, 105),              
 	(201, 'Light', 202.33, 'Brian', 'Brian@mail.com', '203 E Bussie Rd. Bensenville IL.', '2020-04-27', 'Shipped', 22, 205),             
-	(301, 'Heavy', 302.33, 'Charles', 'Charles@mail.com', '303 W Apache St. Arlington Heights IL.', '2020-04-27', 'New Order', 12, 305); 
+	(301, 'Heavy', 302.33, 'Charles', 'Charles@mail.com', '303 W Apache St. Arlington Heights IL.', '2020-04-27', 'Authorized', 12, 305); 
 
 INSERT INTO Weights
 	(MinW, MaxW, Cost)
@@ -201,5 +201,3 @@ VALUES
 	(25,45,10),
 	(45,70,15),
 	(70,100,25);
-
-
