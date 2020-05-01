@@ -28,9 +28,11 @@ CREATE TABLE Orders
 
 CREATE TABLE Weights
 	(
-	MinW int not null,
-	MaxW int not null,
-	Cost int not null
+	BracketID int not null auto_increment,
+	MinW float not null,
+	MaxW float not null,
+	Cost float not null,
+	PRIMARY KEY (BracketID)
 	);
 
 INSERT INTO Product
