@@ -20,7 +20,6 @@
 
   $pdo = safeConnectC();
 
-
   echo "Date:".date("m/d/Y")."<br>";
 //Update authorized new orders
   $sql = "UPDATE Orders
@@ -73,7 +72,7 @@
   <br>
 
 <! link to Start Page>
-    <a href="http://students.cs.niu.edu/~z1751913/WS-B.php">
+    <a href="WS-B.php">
       <font color="#000000" size="5">
         Print Orders
       <font>

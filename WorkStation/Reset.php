@@ -30,7 +30,7 @@
   <br>
 
 <! link to Start Page>
-    <a href="http://students.cs.niu.edu/~z1751913/WS-A.php">
+    <a href="WS-A.php">
       <font color="#000000" size="5">
         Print Packing List
       <font>

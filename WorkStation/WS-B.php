@@ -60,7 +60,8 @@
   include('connectionVarsFunctions.php');
   error_reporting(0);
 
-  safeConnectC();
+  $pdo = safeConnectC();
+
 
 //the sql command for the table
   $sql = "SELECT Distinct OrderID, Orders.number, OrderAmount, CusName, CusMail, CusEmail, WeightBrackets, ShipCharge
@@ -115,7 +116,7 @@
 ?>
 
 <! link to Packing List>
-    <a href="http://students.cs.niu.edu/~z1751913/WS-A.php">
+    <a href="WS-A.php">
       <font color="#000000" size="5">
         Print Packing List
       <font>
