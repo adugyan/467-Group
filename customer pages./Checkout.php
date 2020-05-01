@@ -87,8 +87,46 @@
 
 	<body>
 
+
 		<h1>Confirm and place order</h1>
 
+		Item:
+		<input type="text" name="item" id="item" /><br />
+		Quantity:
+		<input type="text" name="quantity" id="quantity" /><br />
+		Price: 
+		<input type="text" name="price" id="price" /><br /><br />
+		<input type="button" value="Add Product +" onClick="addRow()" id="add"><br /><br />
+
+		<table id="table" border="1">
+				<tr class="head">
+						<th>Item</th>
+						<th>Quantity</th>
+						<th>Price</th>
+				</tr>
+		</table>
+
+		<script> function addRow() {
+			 "use strict";
+
+				var table = document.getElementById("table");
+				var row= document.createElement("tr");
+				var td1 = document.createElement("td");
+				var td2 = document.createElement("td");
+				var td3 = document.createElement("td");
+
+				td1.innerHTML = document.getElementById("item").value;
+				td2.innerHTML  = document.getElementById("quantity").value;
+				td3.innerHTML  = document.getElementById("price").value;
+
+				row.appendChild(td1);
+				row.appendChild(td2);
+				row.appendChild(td3);
+
+				table.children[0].appendChild(row);
+		}
+
+		</script>
 
 		<table>
 			<tr class="head">
@@ -154,7 +192,7 @@
  	    <div class="submit"><input type="submit" value="Order Now"/></div>
 		</form>
 
-		<?php   	
+		<?php
 			//Sets database variables for Catalog
 			$usernameC = "z1838064";
 			$passwordC = "1999Dec01";

@@ -1,3 +1,4 @@
+
 <html>
     <head>
         <title>Metalopaclypse</title>
@@ -8,8 +9,9 @@
     <div class='topnav'>
         <h1 class='pageTitle'>Catalog</h1>
         <a href="homePage.php">Home</a>
+        <a href="Checkout.php" target="_blank">Checkout</a>
     </div>
-    <?php   	
+    <?php
 		//Sets database variables for Catalog
     	$usernameC = "z1838064";
     	$passwordC = "1999Dec01";
@@ -71,7 +73,20 @@
             }
 ?>
 <form action='./Checkout.php' method='post'>
-  <label> Select Your Products <label>
+  <label for="parts"> Select Your Products <label>
+    <select id="parts">
+      <option value="windshield">windshield w/ polymer</option>
+      <option value="saab">wiper blade pair</option>
+      <option value="mercedes">solenoid</option>
+      <option value="audi">tiresome mettle</option>
+      <option value="windshield">bucket seat pair</option>
+      <option value="saab">5 point harness</option>
+      <option value="mercedes">turbo intake valve</option>
+      <option value="audi">supercharger</option>
+    </select>
+    <input type="submit" value="Submit">
+</form>
+
 <?php
 //fetch display data from database using PDO
 
@@ -100,6 +115,14 @@
 ?>
 </table>
 
+
+
+<select id="parts">
+  <option value="windshield">windshield w/ polymer</option>
+  <option value="saab">wiper blade pair</option>
+  <option value="mercedes">solenoid</option>
+  <option value="audi">tiresome mettle</option>
+</select>
+
 </body>
 </html>
-//
