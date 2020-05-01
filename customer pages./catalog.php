@@ -9,13 +9,15 @@
         <h1 class='pageTitle'>Catalog</h1>
         <a href="homePage.php">Home</a>
     </div>
-    <?php   	//Sets database variables for Catalog
+    <?php   	
+		//Sets database variables for Catalog
     	$usernameC = "z1838064";
     	$passwordC = "1999Dec01";
     	$hostnameC = "courses";
     	$databaseC = "z1838064";
     	$dbCatalog = "Product";
     	$dbOrders = "Orders";
+		$dbWeights = "Weights";
 
     	//Sets database variables for Legacy Database
     	$usernameL = "student";
@@ -73,9 +75,9 @@
 <?php
 //fetch display data from database using PDO
 
-
-        //$query = "SELECT * FROM parts";
-        //$d = $pdo->query($sql);
+		$pdo = safeConnectL();
+        $sql = "SELECT * FROM parts";
+        $d = $pdo->query($sql);
 
 ?>
 <table border="3" cellpadding="5" cellspacing="5" align="center">
