@@ -191,9 +191,26 @@ VALUES
 INSERT INTO Orders 
 	(OrderID, WeightBrackets, ShipCharge, CusName, CusEmail, CusMail, Date, ShipStatus, number, OrderAmount)
 VALUES 
-	(101, 'Heavy', 102.33, 'Aaron', 'aaron@mail.com', '103 W Apache St. Arlington Heights IL.', '2020-04-27', 'Authorized', 12, 105),              
-	(201, 'Light', 202.33, 'Brian', 'Brian@mail.com', '203 E Bussie Rd. Bensenville IL.', '2020-04-27', 'Shipped', 22, 205),             
-	(301, 'Heavy', 302.33, 'Charles', 'Charles@mail.com', '303 W Apache St. Arlington Heights IL.', '2020-04-27', 'Authorized', 12, 305); 
+	(101, '5', 102.33, 'Aaron', 'aaron@mail.com', '103 W Apache St. Arlington Heights IL.', '2020-04-27', 'Authorized', 12, 105),              
+	(201, '3', 202.33, 'Brian', 'Brian@mail.com', '113 E Bussie Rd. Bensenville IL.', '2020-03-27', 'Authorized', 45, 205), 
+	(301, '4', 400.43, 'Tom', 'tom@mail.com', '245 E Bussie Rd. Winville IL.', '2020-02-22', 'Authorized', 146, 205), 
+	(401, '1', 32.60, 'Joe Jim', 'jojo@mail.com', '200 E Charile Rd. Bensenville IL.', '2020-04-21', 'Authorized', 11, 205), 
+	(501, '3', 600.70, 'Terrance L.', 'terrL@mail.com', '100 E Bussie Rd. Roseville IL.', '2020-01-23', 'Authorized', 145, 205), 
+	(601, '1', 107.03, 'Brando', 'randoBrando@mail.com', '222 E Bussie Rd. Bensenville IL.', '2020-02-20', 'Authorized', 132, 205), 
+	(701, '5', 76.30, 'Lilly', 'lill@mail.com', '356 E Bussie Rd. Terranville IL.', '2020-02-22', 'Authorized', 108, 205), 
+	(801, '1', 289.70, 'Michelle', 'mich@mail.com', '784 E Bussie Rd. Lesenville IL.', '2020-01-23', 'Authorized', 103, 205), 
+	(901, '1', 36.99, 'Irene', 'irene@mail.com', '140 E Charson Rd. Bensenville IL.', '2020-02-25', 'Authorized', 97, 205), 
+	(1001, '8', 89.37, 'Catherine', 'cathei@mail.com', '56 E Bussie Rd. Bensenville IL.', '2020-01-29', 'Authorized', 93, 205), 
+	(1101, '2', 500.10, 'John', 'john@mail.com', '105 E Bussie Rd. Bensenville IL.', '2020-02-02', 'Authorized', 86, 205), 
+	(1201, '3', 194.40, 'Josh', 'josh@mail.com', '75 E Fredle Rd. Johnsenville IL.', '2020-01-05', 'Authorized', 57, 205), 
+	(1301, '1', 586.12, 'Mary Ann', 'maryAnn@mail.com', '246 E Bussie Rd. Bensenville IL.', '2020-01-15', 'Authorized', 38, 205), 
+	(1401, '4', 198.78, 'Larry', 'larry@mail.com', '197 E Bussie Rd. Bensenville IL.', '2020-02-16', 'Authorized', 69, 205), 
+	(1501, '2', 87.90, 'Ryan', 'ryan@mail.com', '60 E Nerson Rd. Bensenville IL.', '2020-03-17', 'Authorized', 57, 205), 
+	(1601, '4', 467.78, 'Amanda', 'amanda@mail.com', '478 E Bussie Rd. Bensenville IL.', '2020-03-19', 'Authorized', 96, 205), 
+	(1701, '3', 1293.46, 'Anna', 'anna@mail.com', '98 E Leson Rd. Bensenville IL.', '2020-02-09', 'Authorized', 84, 205), 
+	(1801, '1', 1004.28, 'Mike', 'mike@mail.com', '104 E Bussie Rd. Bensenville IL.', '2020-02-13', 'Authorized', 36, 205), 
+	(1901, '3', 50.12, 'Mark K.', 'markk@mail.com', '103 E Bussie Rd. Bensenville IL.', '2020-01-16', 'Authorized', 16, 205), 
+	(2001, '5', 302.33, 'Charles', 'Charles@mail.com', '303 W Apache St. Arlington Heights IL.', '2020-01-07', 'Authorized', 12, 305); 
 
 INSERT INTO Weights
 	(MinW, MaxW, Cost)
