@@ -32,18 +32,60 @@ session_start();
 		text-align: center;
 		margin: auto;
 		margin-top: 3%;
+		margin-bottom: 4%;
 		}	
 
 	table, th, td
 		{
-		font-size: 1.3vw;
 		font-family: sans-serif;
 		text-align: center;
 		margin: auto;
 		margin-top: 2%;
-		border: 1px solid black;
-		padding: 0.1vw;
+		border: 7px solid rgba(216, 235, 255, 1.0);
+		border-collapse: collapse;		
 		}
+
+	tr.headers
+		{
+		background: rgba(141, 217, 255, 1.0);
+		font-size: 1.6vw;
+		}
+	
+	input.costInput
+		{
+		font-size: 1.4vw;
+		box-sizing: border-box;
+		background: rgba(188, 221, 255, 1.0);
+		width: 13vw;
+		text-align: center;
+		-webkit-appearance: none;
+		-moz-appearance: textfield;
+		vertical-align: middle;	
+		}
+		
+	input.weightInput
+		{
+		font-size: 1.4vw;
+		box-sizing: border-box;
+		background: rgba(188, 221, 255, 1.0);
+		width: 13vw;
+		text-align: center;
+		-webkit-appearance: none;
+		-moz-appearance: textfield;
+		vertical-align: middle;	
+		}
+	
+	button.submitBracket
+		{
+		font-size: 1.4vw;	
+		text-align: center;
+		background: rgba(188, 221, 255, 1.0);
+		padding: 1px 10px;
+		box-sizing: border-box;
+		width: 18vw;
+		vertical-align: middle;
+		}
+	
 
 	</style>
 

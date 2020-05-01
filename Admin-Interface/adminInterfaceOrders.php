@@ -136,8 +136,19 @@ session_start();
 		text-align: center;
 		margin: auto;
 		margin-top: 2%;
-		border: 1px solid black;
-		padding: 0.1vw;
+		border: 7px solid rgba(216, 235, 255, 1.0);
+		border-collapse: collapse;
+		}
+
+	tr.headers
+		{
+		background: rgba(141, 217, 255, 1.0);
+		font-size: 1.6vw;
+		}
+
+	td
+		{
+		background: rgba(255, 255, 255, 1.0);
 		}
 
 	p.noResults
