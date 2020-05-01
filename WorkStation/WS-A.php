@@ -23,7 +23,7 @@
   echo "Date:".date("m/d/Y")."<br>";
 //Update authorized new orders
   $sql = "UPDATE Orders
-           SET   ShipStatus = 'Authorized Order'
+           SET   ShipStatus = 'Authorized'
            WHERE ShipStatus = 'New Order';";
 
 //save the result of the comand in $result and fetch each row in $rows
@@ -34,7 +34,7 @@
   $sql = "SELECT ProductNum, ProductLoc, SUM(OrderAmount)
             FROM Orders,Product
            WHERE Product.number=Orders.number
-             AND ShipStatus = 'Authorized Order'
+             AND ShipStatus = 'Authorized'
            GROUP BY ProductLoc
            ORDER BY ProductLoc;";
 

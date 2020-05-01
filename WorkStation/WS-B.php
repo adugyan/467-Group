@@ -67,7 +67,7 @@
   $sql = "SELECT Distinct OrderID, Orders.number, OrderAmount, CusName, CusMail, CusEmail, WeightBrackets, ShipCharge
           FROM   Orders, Product
           WHERE  Orders.number = Product.number
-          AND    ShipStatus = 'Authorized Order'
+          AND    ShipStatus = 'Authorized'
           ORDER  BY ProductLoc;";
 
 //save the result of the comand in $result and fetch each row in $rows
