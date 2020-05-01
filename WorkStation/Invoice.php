@@ -18,7 +18,7 @@
 <?php
   include('connectionVarsFunctions.php');
 
-  $pdo = safeConnectC();
+  $pdo = safeconnectC();
 
   echo "Date:".date("m/d/Y")."<br>";
 
@@ -56,6 +56,7 @@
 //table end
   echo "</table>";
 
+//sending email to customer
   $Email = "";
   $subject = "Order Shipped";
   $txt = "Your Order was shipped.";
@@ -72,9 +73,9 @@
   $OrderAmount = $row["OrderAmount"];
   $ShipCharge = $row["ShipCharge"];
 
-//connect to parts DB
+
   $pdo = safeConnectL();
-    
+
 //fetch item description etc.
   $sql = "SELECT description, price, pictureURL
           FROM parts WHERE number=$ProductID";

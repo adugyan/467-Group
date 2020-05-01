@@ -31,7 +31,7 @@
 
 //the sql command for the table, sum up order amount and sort by location
 //                               in convenient to picking items
-  $sql = "SELECT ProductNum, ProductLoc, SUM(OrderAmount)
+  $sql = "SELECT Orders.number, ProductLoc, SUM(OrderAmount)
             FROM Orders,Product
            WHERE Product.number=Orders.number
              AND ShipStatus = 'Authorized'
