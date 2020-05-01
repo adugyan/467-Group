@@ -154,13 +154,15 @@
  	    <div class="submit"><input type="submit" value="Order Now"/></div>
 		</form>
 
-		<?php   	//Sets database variables for Catalog
+		<?php   	
+			//Sets database variables for Catalog
 			$usernameC = "z1838064";
 			$passwordC = "1999Dec01";
 			$hostnameC = "courses";
 			$databaseC = "z1838064";
 			$dbCatalog = "Product";
 			$dbOrders = "Orders";
+			$dbWeights = "Weights";
 
 			//Sets database variables for Legacy Database
 			$usernameL = "student";
@@ -215,10 +217,11 @@
 		?>
 
 <?php
+$pdo = safeConnectC();
 $stmt = $pdo->prepare("INSERT INTO orders (CusName, cusEmail, cusMail) VALUES (?,?,?)");
 try {
     $pdo->beginTransaction();
-    foreach ($data as $row)
+    foreach ($stmt as $row)
     {
         $stmt->execute($row);
     }
