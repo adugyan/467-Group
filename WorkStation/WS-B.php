@@ -15,7 +15,7 @@
   <p><h1>Print Shipping Labels</h1></p>
 
 <! link to Shipping Rate Chart>
-    <a href="https://1ivu6q1gqh2kndjc23ryof11v5-wpengine.netdna-ssl.com/wp-content/uploads/2019/01/Shipping-Rates-Cheapest-Carrier-Ground-Full.png" target="_blank">
+    <a href="Shipping-Rates-Cheapest-Carrier-Ground-Full.png" target="_blank">
       <font color="#000000" size="5">
         Rate Chart
       <font>
