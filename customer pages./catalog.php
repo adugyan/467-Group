@@ -67,18 +67,37 @@
             return $pdo;
 
             }
+?>
+<form action='./Checkout.php' method='post'>
+  <label> Select Your Products <label>
+<?php
+//fetch display data from database using PDO
 
 
-    try {
-        $pdo = new PDO($dsn, $GLOBALS['usernameL'], $GLOBALS['passwordL']);
+        //$query = "SELECT * FROM parts";
+        //$d = $pdo->query($sql);
 
-        $sql = 'SELECT * FROM parts;
+?>
+<table border="3" cellpadding="5" cellspacing="5" align="center">
+<tr>
+  <th>Number</th>
+  <th>Description</th>
+  <th>Price</th>
+</tr>
 
-        $q = $pdo->query($sql);
-        $q->setFetchMode(PDO::FETCH_ASSOC);
-    } catch (PDOException $e) {
-        die("Could not connect to the database $dbname :" . $e->getMessage());
-    }
+<?php  foreach($d as $data)
+{
+?>
+<tr>
+  <td><?php echo $data['number']; ?></td>
+  <td><?php echo $data['description']; ?></td>
+  <td><?php echo $data['price']; ?></td>
+</tr>
+<?php
+}
+?>
+</table>
 
-
-    ?>
+</body>
+</html>
+//

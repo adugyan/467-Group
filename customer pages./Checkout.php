@@ -125,18 +125,18 @@
 		<form action="" method="get">
 			<fieldset>
 				<legend>Checkout</legend>
-				<p><label class="title" for="name">Name:</label>
-					 <input type="text" name="name" id="name"><br />
-					 <label class="title" for="email">Email:</label>
-					 <input type="text" name="email" id="email"></p>
+				<p><label class="title" for="CusName">Name:</label>
+					 <input type="text" name="CusName" id="CusName"><br />
+					 <label class="title" for="CusEmail">Email:</label>
+					 <input type="text" name="CusEmail" id="CusEmail"></p>
 
 					 <label class="title" for="card">Card Number:</label>
 	 				 <input type="text" name="card" id="card"><br />
 	 				 <label class="title" for="cvv">CVV:</label>
 	 	 				<input type="text" name="cvv" id="cvv"><br />
 
-           <p><label class="title" for="line 1">Address:</label>
- 					 <input type="text" name="line1" id="line1"><br />
+           <p><label class="title" for="CusMail">Address:</label>
+ 					 <input type="text" name="CusMail" id="CusMail"><br />
 					 <label class="title" for="city">City:</label>
   					 <input type="text" name="city" id="city"><br />
 					 <label class="title" for="zip">Zip/Postal:</label>
@@ -214,29 +214,20 @@
 		        }
 		?>
 
-		<?php
-		$url = 'http://blitz.cs.niu.edu/CreditCard/';
-$data = array(
-	'vendor' => 'VE001-99',
-	'trans' => '907-987654321-296',
-	'cc' => '6011 1234 4321 1234',
-	'name' => 'John Doe',
-	'exp' => '12/2020',
-	'amount' => '654.32');
-
-$options = array(
-    'http' => array(
-        'header' => array('Content-type: application/json', 'Accept: application/json'),
-        'method' => 'POST',
-        'content'=> json_encode($data)
-    )
-);
-
-$context  = stream_context_create($options);
-$result = file_get_contents($url, false, $context);
-echo($result);
-?>
-
+<?php
+$stmt = $pdo->prepare("INSERT INTO orders (CusName, cusEmail, cusMail) VALUES (?,?,?)");
+try {
+    $pdo->beginTransaction();
+    foreach ($data as $row)
+    {
+        $stmt->execute($row);
+    }
+    $pdo->commit();
+}catch (Exception $e){
+    $pdo->rollback();
+    throw $e;
+}
+ ?>
 
 		</body>
 </html>
