@@ -94,7 +94,7 @@
 		<input type="text" name="item" id="item" /><br />
 		Quantity:
 		<input type="text" name="quantity" id="quantity" /><br />
-		Price: 
+		Price:
 		<input type="text" name="price" id="price" /><br /><br />
 		<input type="button" value="Add Product +" onClick="addRow()" id="add"><br /><br />
 
@@ -160,7 +160,7 @@
 				<td></td>
 			</tr>
 		</table>
-		<form action="" method="get">
+		<form action="" method="post">
 			<fieldset>
 				<legend>Checkout</legend>
 				<p><label class="title" for="CusName">Name:</label>
@@ -170,8 +170,8 @@
 
 					 <label class="title" for="card">Card Number:</label>
 	 				 <input type="text" name="card" id="card"><br />
-	 				 <label class="title" for="cvv">CVV:</label>
-	 	 				<input type="text" name="cvv" id="cvv"><br />
+	 				 <label class="title" for="cc">CVV:</label>
+	 	 				<input type="text" name="cc" id="cc"><br />
 
            <p><label class="title" for="CusMail">Address:</label>
  					 <input type="text" name="CusMail" id="CusMail"><br />
@@ -185,10 +185,7 @@
 						 <option value="in">IN</option>
 						 <option value="wi">WI</option>
 					 </select></p>
-				<span class="title">Are you a member?</span>
-				<label><input type="radio" name="member" value="yes" /> Yes</label>
-				<label><input type="radio" name="member" value="no" /> No</label>
-			</fieldset>
+
  	    <div class="submit"><input type="submit" value="Order Now"/></div>
 		</form>
 
@@ -268,6 +265,37 @@ try {
     $pdo->rollback();
     throw $e;
 }
+ ?>
+
+ <?php
+ class SampleCodeConstants
+ {
+ 	//merchant credentials
+ 	const MERCHANT_LOGIN_ID = "5KP3u95bQpv";
+ 	const MERCHANT_TRANSACTION_KEY = "346HZ32z3fP4hTG2";
+ }
+ ?>
+
+ <?php
+ $url = 'http://blitz.cs.niu.edu/CreditCard/';
+ $data = array(
+
+ 	'cc' => '6011 1234 4321 1234',
+ 	'Cusname' => 'John Doe',
+ 	'exp' => '12/2020', 
+ 	'price' => '654.32');
+
+ $options = array(
+     'http' => array(
+         'header' => array('Content-type: application/json', 'Accept: application/json'),
+         'method' => 'POST',
+         'content'=> json_encode($data)
+     )
+ );
+
+ $context  = stream_context_create($options);
+ $result = file_get_contents($url, false, $context);
+ echo($result);
  ?>
 
 		</body>

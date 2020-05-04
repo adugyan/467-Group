@@ -49,8 +49,8 @@
 				<img src="images/logo.gif" alt="Metalopaclypse" />
 			</div>
 			<ul id="navigation">
-				<li><a href="homePage.html" class="on">Home</a></li>
-				<li><a href="catalog.html">For Sale</a></li>
+				<li><a href="homePage.php" class="on">Home</a></li>
+				<li><a href="catalog.php">For Sale</a></li>
 
 				<li><a href="#">About</a></li>
 				<li><a href="#">Contact</a></li>
